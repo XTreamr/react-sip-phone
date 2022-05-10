@@ -5,6 +5,7 @@ class ToneManager {
   currentTone: any
 
   playRing(type: string) {
+    return
     const state = phoneStore.getState()
     // @ts-ignore
     const deviceId = state.device.primaryAudioOutput
@@ -22,6 +23,7 @@ class ToneManager {
   }
 
   stopAll() {
+    return
     if (this.currentTone) {
       this.currentTone.stop()
       this.currentTone = undefined
